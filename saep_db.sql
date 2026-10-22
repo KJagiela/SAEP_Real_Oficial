@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS tutores;
 DROP TABLE IF EXISTS usuarios;
 
+
 -- ============================================================
 -- TABELA: usuarios
 -- Usuários do sistema (funcionários da clínica) que fazem login
