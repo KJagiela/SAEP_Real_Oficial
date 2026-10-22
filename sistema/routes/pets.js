@@ -49,5 +49,3 @@ router.post('/', verificarSessao, async (req, res) => {
         await client.end();
     }
 });
-
-export default router;

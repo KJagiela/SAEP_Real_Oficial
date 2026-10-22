@@ -28,10 +28,7 @@ import { verificarSessao } from '../middleware/auth-middleware.js';
 
 const router = express.Router();
 
-// ─────────────────────────────────────────
-// GET / -> listar tutores (RF-12)
-// GET /?busca=termo -> listar tutores filtrados (RF-14)
-// ─────────────────────────────────────────
+
 router.get('/', verificarSessao, async (req, res) => {
     const client = criarCliente();
     try {
@@ -102,7 +99,7 @@ router.put('/:id', verificarSessao, async (req, res) => {
 
         const { id } = req.params;
         const { nome, cpf, telefone } = req.body;
-
+        
         if (!nome || !cpf) {
             return res.status(400).json({ erro: 'Nome e CPF são obrigatórios.' });
         }
